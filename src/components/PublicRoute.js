@@ -5,7 +5,7 @@ import { useProfile } from '../context/profile.context';
 const PublicRoute = ({ children, ...routeProps }) => {
   const { profile, isLoading } = useProfile();
 
-  if (!isLoading && profile) {
+  if (isLoading && !profile) {
     return (
       <Container>
         <Loader center vertical size="md" content="Loading" speed="slow" />
