@@ -31,6 +31,8 @@ const EditableInput = ({
     if (trimmed !== initialValue) {
       await onSave(trimmed);
     }
+
+    setIsEditable(false);
   };
   return (
     <div>
@@ -40,18 +42,18 @@ const EditableInput = ({
           {...inputProps}
           disabled={!isEditable}
           placeholder={placeholder}
-          onChange={onInputChange}
           value={input}
+          onChange={onInputChange}
         />
-      </InputGroup>
-      <InputGroup.Button onClick={onEditClick}>
-        <Icon icon={isEditable ? 'close' : 'edit2'} />
-      </InputGroup.Button>
-      {isEditable && (
-        <InputGroup.Button onClick={onSaveClick}>
-          <Icon icon="check" />
+        <InputGroup.Button onClick={onEditClick}>
+          <Icon icon={isEditable ? 'close' : 'edit2'} />
         </InputGroup.Button>
-      )}
+        {isEditable && (
+          <InputGroup.Button onClick={onSaveClick}>
+            <Icon icon="check" />
+          </InputGroup.Button>
+        )}
+      </InputGroup>
     </div>
   );
 };
