@@ -23,9 +23,9 @@ const getBlob = canvas => {
 
 const AvatarUploadBtn = () => {
   const { isOpen, open, close } = useModalState();
+  const { profile } = useProfile();
   const [img, setImg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const profile = useProfile();
   const avatarEditorRef = useRef();
 
   const onFileInputChange = ev => {
