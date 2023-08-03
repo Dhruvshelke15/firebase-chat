@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router';
 import { Loader } from 'rsuite';
 import ChatTop from '../../components/chat-window/top';

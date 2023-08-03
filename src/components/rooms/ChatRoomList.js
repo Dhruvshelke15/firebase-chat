@@ -6,6 +6,7 @@ import { useRooms } from '../../context/rooms.context';
 const ChatRoomList = ({ aboveElHeight }) => {
   const rooms = useRooms();
   const location = useLocation();
+
   return (
     <Nav
       appearance="subtle"
@@ -17,7 +18,6 @@ const ChatRoomList = ({ aboveElHeight }) => {
       }}
       activeKey={location.pathname}
     >
-      {' '}
       {!rooms && (
         <Loader center vertical content="Loading" speed="slow" size="md" />
       )}
@@ -33,9 +33,6 @@ const ChatRoomList = ({ aboveElHeight }) => {
             <RoomItem room={room} />
           </Nav.Item>
         ))}
-      <Nav.Item>
-        <RoomItem />
-      </Nav.Item>
     </Nav>
   );
 };
