@@ -4,14 +4,15 @@ import 'firebase/database';
 import 'firebase/storage';
 
 const config = {
-  apiKey: 'AIzaSyBaNLb1Axa1hsFRIRy7jlCttXjRlwmVHus',
-  authDomain: 'fir-chat-812ce.firebaseapp.com',
+  apiKey: 'AIzaSyD_I7IT3ev_EoYz1HXitfCIl-hxT04x4a4',
+  authDomain: 'firechat-efed3.firebaseapp.com',
   databaseURL:
-    'https://fir-chat-812ce-default-rtdb.europe-west1.firebasedatabase.app/',
-  projectId: 'fir-chat-812ce',
-  storageBucket: 'fir-chat-812ce.appspot.com',
-  messagingSenderId: '387257584392',
-  appId: '1:387257584392:web:5b1f27165a80786f6dfabd',
+    'https://firechat-efed3-default-rtdb.asia-southeast1.firebasedatabase.app',
+  projectId: 'firechat-efed3',
+  storageBucket: 'firechat-efed3.appspot.com',
+  messagingSenderId: '335131926486',
+  appId: '1:335131926486:web:3410f8d436730071630e77',
+  measurementId: 'G-BM586WYH4K',
 };
 
 const app = firebase.initializeApp(config);
