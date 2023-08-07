@@ -7,3 +7,7 @@ admin.initializeApp({
   databaseURL:
     'https://firechat-efed3-default-rtdb.asia-southeast1.firebasedatabase.app',
 });
+
+const { sendFcm } = require('./src/fcm');
+
+exports.sendFcm = sendFcm;
